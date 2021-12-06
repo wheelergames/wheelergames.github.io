@@ -1,0 +1,21 @@
+<nav id="navbar1">
+    <ul class="nav justify-content-center nav-pills">
+        <li class="logo">
+            <a href="{{ site.baseurl }}">
+                <img src="/assets/images/wheeler_games_logo.png">
+            </a>
+        </li>
+        {% assign links = site.data.navigation %}
+        {% for link in links %}
+        {% assign class = nil %}
+        {% assign lowercaseTitle = link.title | downcase | remove: " " %}
+        {% if page.url contains lowercaseTitle %}
+        {% assign class = 'active' %}
+        {% endif %}
+        <li class="nav-item nav-link {{ class }}">
+            <a class="nav-item {{ class }}" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}"><b>{{ link.title }}</b></a>
+        </li>
+        {% endfor %}
+        <li><img id="construction" src="/assets/images/under_construction.png"></li>
+    </ul>
+</nav>

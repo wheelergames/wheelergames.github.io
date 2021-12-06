@@ -1,0 +1,28 @@
+---
+layout: page
+title: Games
+short_description: All the games currently released and in production from Wheeler Games.
+---
+<div class="store-bar">
+  <a href="https://play.google.com/store/apps/developer?id=Wheeler+Games"><img src="/assets/images/google-play-badge.png"></a>
+  <a href="https://apps.apple.com/gb/developer/russell-wheeler/id1510580508"><img src="/assets/images/app-store-badge.svg"></a>
+</div>
+  {% assign all_games = site.games | sort: "launch_date" %}
+  {% for game in all_games %}
+      <div class="game_row_icon_and_name">
+        <div class="games_icon_list">
+          <img src="assets/images/games/{{ game.img_name }}" class="games_icon_list">
+        </div>
+        <div>
+          <h2><a href="{{ game.url }}">{{ game.name }}</a></h2>
+            <div class="platform_row">
+                {% for platform in game.platform %}
+                <div>
+                    <img class="platform_icon" src="assets/images/{{ platform }}.png"/>
+                </div>
+                {% endfor %}
+            </div>
+            <p>{{ game.content | markdownify }}</p>
+        </div>
+      </div>
+{% endfor %}

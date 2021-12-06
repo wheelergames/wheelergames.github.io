@@ -1,0 +1,3 @@
+1) build it once - sudo docker build -t wheelergames_site_local -f Dockerfile .
+2) run it - sudo docker run --name wheelergames_site_local --mount type=bind,source=$(pwd)/,target=/ -p 4000:4000 -it wheelergames_site_local
+3) if it's already running, but not started - sudo docker start wheelergames_site_local
