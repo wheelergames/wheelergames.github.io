@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            Wheeler Games
 tagline:          Black Theme for Jekyll
 description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
-url:              http://wheelergames.co.uk
+url:              http://wheelergames.co.uk/
 baseurl:          /
                   # the optional subpath of your site, e.g. "/my-jekyll-site/"
                   # This will apply to all pages in your Jekyll site.
