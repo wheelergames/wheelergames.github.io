@@ -3,11 +3,12 @@ layout: default
 title: Home
 <!--style: home-->
 ---
-<div class="w3-content w3-display-container">
+<!--<div class="w3-content w3-display-container">-->
+<div>
   {% for image in site.static_files %}
   {% if image.path contains 'images/home_carousel' %}
-  <div>
-    <img class="mySlides" src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image"/>
+  <div class="mySlides">
+    <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%; height: auto;"/>
   </div>
   {% endif %}
   {% endfor %}
