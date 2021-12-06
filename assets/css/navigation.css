@@ -1,6 +1,6 @@
 #navbar1 > ul.nav {
     font-family: 'Ubuntu', sans-serif;
-    background: #ff5fee
+    background: #ffffff
 }
 
 #navbar1 {
@@ -10,6 +10,7 @@
    width: 100%;
    box-shadow: 0px 4px 4px 0px rgba(0,0,0,15%);
    margin-bottom: 50px !important;
+   font-size: large;
 }
 
 #navbar1 > ul > li.nav-item.active {
