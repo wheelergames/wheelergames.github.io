@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
     myHamburger = document.querySelector(".hamburger");
     navMenu = document.querySelector(".nav");
     navLink = document.querySelectorAll(".nav-link");
-    console.log("document="+document.querySelector(".hamburger"));
-    console.log("myHamburger="+myHamburger);
 
     myHamburger.addEventListener("click", mobileMenu);
     navLink.forEach(n => n.addEventListener("click", closeMenu));

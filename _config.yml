@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            Wheeler Games
-tagline:          Black Theme for Jekyll
+tagline:          Wheeler Games - making digital versions of your favourite boardgames.
 description:      "A two-column black theme with a scrolling sidebar. Ideal for sites requiring a master-detail layout, e.g. documentation, cheatsheets, lyrics, notes..."
 url:              https://wheelergames.co.uk/
 baseurl:          /

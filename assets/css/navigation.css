@@ -1,6 +1,146 @@
-#navbar1 > ul.nav {
-    font-family: 'Ubuntu', sans-serif;
-    background: #ffffff
+/* slider-wrapper */
+.slider-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 33vw;
+/*  max-height: 500px;
+  min-height: 300px;*/
+  background: #fff;
+  overflow: hidden;
+}
+
+.slider-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* slider-img */
+ul.slider-img {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 0.5s;
+}
+
+ul.slider-img li {
+  flex: 1 0 100%;
+}
+
+ul.slider-img li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* slider-arrow */
+ul.slider-arrow {
+  position: relative;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  ul.slider-arrow {
+    font-size: 2.5rem;
+  }
+}
+
+ul.slider-arrow li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 15px;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+ul.slider-arrow li:hover {
+  opacity: 1;
+}
+
+/* slider-dot */
+.slider-dot {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  color: #ff5fee;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.slider-dot li {
+  cursor: pointer;
+  margin: 0 8px;
+  font-size: 0.6rem;
+  opacity: 0.4;
+}
+
+.slider-dot li.active {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .slider-dot li {
+    margin: 0 12px;
+    font-size: 0.95rem;
+  }
+}
+
+
+.carousel_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+.previous_carousel_button, .next_carousel_button {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  margin-top: 0px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+*/
+
+ul.slider-arrow {
+  position:relative;
+  color:#ff5fee;
+  font-size:2rem;
+  display: flex;
+  justify-content: space-between;
+  height:100%;
+  width:100%;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.previous_carousel_button {
+  right: 100%;
+  border-radius: 4px 0 0 4px;
+}
+
+.next_carousel_button {
+  right: 0;
+  border-radius: 4px 0 0 4px;
 }
 
 #navbar1 {
@@ -9,7 +149,9 @@
     top: 0px;
     width: 100%;
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,15%);
+/*
     margin-bottom: 50px !important;
+*/
     font-size: 170%;
     padding: 0.5rem 1.5rem;
     margin: 0;
@@ -18,6 +160,11 @@
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
+}
+
+#navbar1 > ul.nav {
+    font-family: 'Ubuntu', sans-serif;
+    background: #ffffff
 }
 
 
@@ -95,6 +242,7 @@
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
+            /*box-shadow: 0px 4px 4px 0px rgba(0,0,0,15%);*/
     }
 
     .nav.active {
@@ -106,6 +254,7 @@
     }
 
     .hamburger {
+        margin-right: 30px;
         display: block;
         cursor: pointer;
     }
