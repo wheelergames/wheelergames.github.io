@@ -1,8 +1,10 @@
-var slideIndex = 1;
+var slideIndex = 0;
 showDivs(slideIndex);
 carousel();
+var timeout;
 
 function plusDivs(n) {
+  clearTimeout(timeout);
   showDivs(slideIndex += n);
 }
 
@@ -33,5 +35,5 @@ function carousel() {
     slideIndex = 1
   }
   x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 5000); // Change image every 2 seconds
+  timeout = setTimeout(carousel, 5000); // Change image every 2 seconds
 }

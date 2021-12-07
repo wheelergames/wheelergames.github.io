@@ -6,11 +6,11 @@ title: Home
 <!--<div class="w3-content w3-display-container">-->
 <div>
   {% for image in site.static_files %}
-  {% if image.path contains 'images/home_carousel' %}
-  <div class="mySlides">
-    <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%; height: auto;"/>
-  </div>
-  {% endif %}
+    {% if image.path contains 'images/home_carousel' %}
+      <div class="mySlides">
+        <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%; height: auto;"/>
+      </div>
+    {% endif %}
   {% endfor %}
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
