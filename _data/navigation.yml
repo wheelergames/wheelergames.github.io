@@ -1,0 +1,13 @@
+- title: GAMES
+  url: games.html
+  sublinks:
+    - title: AVOWEL
+      url: wordsy.html
+    - title: MASTERS GALLERY
+      url: matcg.html
+- title: NEWS
+  url: news.html
+- title: DEV BLOG
+  url: devblog.html
+- title: ABOUT
+  url: about.html

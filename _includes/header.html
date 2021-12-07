@@ -15,9 +15,17 @@
 
   <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav pull-right">
-      <li class="active">
-        <a href="/">Home</a>
-      </li>
+      {% assign links = site.data.navigation %}
+      {% for link in links %}
+        {% assign class = nil %}
+        {% assign lowercaseTitle = link.title | downcase | remove: " " %}
+        {% if page.url contains lowercaseTitle %}
+          {% assign class = 'active' %}
+        {% endif %}
+        <li class="{{ class }}">
+          <a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}"><b>{{ link.title }}</b></a>
+        </li>
+      {% endfor %}
       <li>
         <a href="/about.html">About</a>
       </li>
