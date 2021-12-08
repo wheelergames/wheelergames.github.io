@@ -9,28 +9,12 @@ title: Home
     {% for image in site.static_files %}
       {% if image.path contains 'images/home_carousel' %}
         <li>
-<!--          <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image"/>-->
           <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%; height: auto;"/>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
 </div>
-
-<!--
-<div class="carousel_container">
-  {% for image in site.static_files %}
-    {% if image.path contains 'images/home_carousel' %}
-      <div class="mySlides">
-        <img  src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image" style="width:100%; height: auto;"/>
-      </div>
-    {% endif %}
-  {% endfor %}
-
-  <button class="previous_carousel_button" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="next_carousel_button" onclick="plusDivs(1)">&#10095;</button>
-</div>
--->
 
 <div class="posts">
   {% for post in paginator.posts %}
@@ -68,3 +52,5 @@ title: Home
 <script>
   {% include js/carousel.js %}
 </script>
+
+<!--Google Play and the Google Play logo are trademarks of Google LLC.-->

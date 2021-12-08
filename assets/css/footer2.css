@@ -3,34 +3,14 @@
     margin: 15px;
 }
 
-.footer {
+#footer {
     z-index: 10000;
     position: absolute;
     bottom: 0px;
     width: 100%;
     background: #ff5fee;
     font-family: 'Ubuntu', sans-serif !important;
-
-    display: inline-flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
 }
-
-.footer .third {
-    flex-grow: 1;
-}
-
-.footer .signup {
-    background: #af5f0e;
-    align-self: right;
-}
-
-.footer .socials {
-    background: #af5fee;
-    align-self: center;
-}
-
-/*
 
 #footer > ul > li.nav-item {
   background: #ff5fee;
@@ -80,7 +60,6 @@
         align-items: center;
     }
 }
-*/
 
 
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
