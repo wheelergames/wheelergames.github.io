@@ -1,1 +1,44 @@
-.mySlides {display:none;}
+img .carousel_image {
+    width:100%;
+    height: auto;
+}
+
+.feeds {
+    display:grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
+    column-gap: 10px;
+}
+
+.feeds .news_feed {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+}
+
+.feeds .blog_feed {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 825px) {
+.feeds {
+    display:grid;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 10px 1fr 0.1fr 1fr 10px;
+    column-gap: 10px;
+}
+
+.feeds .news_feed {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    justify-self: center;
+}
+
+.feeds .blog_feed {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    justify-self: center;
+}
+
+}

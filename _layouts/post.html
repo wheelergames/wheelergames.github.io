@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
+  <div>{% include read_time.html %}</div>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   <p>{{ page.sections['paragraphs'][0] | textilize }}</p>
   <p>{{ page.sections['paragraphs'][1] | textilize }}</p>
