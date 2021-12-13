@@ -8,14 +8,21 @@ style: home
   <ul class="slider-img">
     {% for image in site.static_files %}
       {% if image.path contains 'images/home_carousel' %}
+        {% assign parts = image.path | split: "_" %}
         <li>
-          <a class="carousel_image" href="{{ site.url }}{{ site.baseurl }}/blah.html">
-            <img class="carousel_image" src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image"/>
+          <a href="{{ site.url }}{{ site.baseurl }}games/{{ parts[2] }}.html">
+            <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image"/>
           </a>
         </li>
       {% endif %}
     {% endfor %}
   </ul>
+  <div class="carousel-arrows arrow-left" role="button">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+  <div class="carousel-arrows arrow-right" role="button">
+    <i class="fas fa-chevron-right"></i>
+  </div>
 </div>
 
 <div class="feeds">
