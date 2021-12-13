@@ -88,7 +88,14 @@ ul.slider-img li img {
     grid-row: 2 / span 1;
 }
 
-.carousel-arrows div:hover {
+i.fas {
+    cursor: pointer;
+    padding: 0 15px;
+    opacity: 0.4;
+    transition: 0.25s;
+}
+
+i.fas:hover {
   opacity: 1;
 }
 
@@ -98,21 +105,6 @@ ul.slider-img li img {
 
 .arrow-right {
     grid-column: 3 / span 1;
-}
-
-
-ul.slider-arrow li {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  height: 100%;
-  padding: 0 15px;
-  opacity: 0.4;
-  transition: 0.5s;
-}
-
-ul.slider-arrow li:hover {
-  opacity: 1;
 }
 
 /* slider-dot */
