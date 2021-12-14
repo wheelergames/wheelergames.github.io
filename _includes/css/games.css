@@ -1,0 +1,103 @@
+.games-container {
+    display: grid;
+    grid-template-rows: max-content 10px auto;
+    row-gap: 10px;
+}
+
+.store-bar {
+    grid-row: 1 / span 1;
+
+    display:grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 20px;
+}
+
+.store-bar img {
+    height: 75px;
+}
+
+.android-store {
+    display: grid;
+    grid-column: 2 / span 1;
+    justify-content: right;
+}
+
+.ios-store{
+    grid-column: 4 / span 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .store-bar {
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10px 1fr 10px 1fr 10px;
+        margin-bottom: 20px;
+    }
+
+    .android-store {
+        display: grid;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        justify-content: center;
+    }
+
+    .ios-store{
+        display: grid;
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+        justify-content: center;
+    }
+
+}
+
+.game_blocks {
+    grid-row: 3 / span 1;
+
+    display:grid;
+    grid-template-columns: 10px 1fr 10px;
+}
+
+.game_row_icon_and_name {
+    width: 100%;
+    grid-column: 2 / span 1;
+    justify-self: left;
+
+    display:grid;
+    grid-template-columns: 150px 4fr;
+}
+
+.games_icon_list {
+    justify-self: center;
+    grid-column: 1 / span 1;
+}
+
+.games_details {
+    grid-column: 2 / span 1;
+}
+
+
+img.games_icon_list {
+    height:150px;
+    padding: 10px;
+    /*width:150px;
+    margin-right: 50px;
+    margin-bottom: 30px; */
+}
+
+.game_row {
+    width:100%;
+    height:auto;
+    pad-right:1%;
+}
+
+.platform_row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.platform_icon {
+    width: 30px;
+    margin: 10px 10px;
+}

@@ -1,0 +1,18 @@
+<div class="game_row_icon_and_name">
+    <div class="games_icon_list">
+        <a href="{{ game.url }}">
+            <img src="assets/images/games/{{ game.img_name }}" class="games_icon_list">
+        </a>
+    </div>
+    <div class="games_details">
+        <h3><a href="{{ game.url }}">{{ game.name }}</a></h3>
+        <div class="platform_row">
+            {% for platform in game.platform %}
+            <div>
+                <img class="platform_icon" src="assets/images/platform/{{ platform }}.png"/>
+            </div>
+            {% endfor %}
+        </div>
+        <p>{{ game.tagline | markdownify }}</p>
+    </div>
+</div>

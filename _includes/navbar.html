@@ -11,7 +11,7 @@
                 {% assign class = 'active' %}
             {% endif %}
             <li class="nav-item nav-link {{ class }}">
-                <a class="nav-item {{ class }}" href="{{ site.url }}{{ site.baseurl }}{{ link.url }}"><b>{{ link.title }}</b></a>
+                <a class="nav-item {{ class }}" href="/{{ link.url }}"><b>{{ link.title }}</b></a>
             </li>
         {% endfor %}
         <li><img id="construction" src="/assets/images/under_construction.png"></li>
