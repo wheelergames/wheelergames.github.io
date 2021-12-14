@@ -10,8 +10,8 @@ style: home
       {% if image.path contains 'images/home_carousel' %}
         {% assign parts = image.path | split: "_" %}
         <li>
-          <a href="{{ site.url }}{{ site.baseurl }}games/{{ parts[2] }}.html">
-            <img src="{{ site.url }}{{ site.baseurl }}{{ image.path }}" alt="image"/>
+          <a href="{{ site.url }}/games/{{ parts[2] }}.html">
+            <img src="{{ site.url }}/{{ image.path }}" alt="image"/>
           </a>
         </li>
       {% endif %}
@@ -32,7 +32,7 @@ style: home
       {% for post in site.categories.news limit:3 %}
       <div class="post">
         <h3 class="post-title">
-          <a href="{{ site.baseurl }}{{ post.url | remove_first: '/'}}">
+          <a href="/{{ post.url | remove_first: '/'}}">
             {{ post.title }}
           </a>
         </h3>
@@ -52,7 +52,7 @@ style: home
       {% for post in site.categories.devblog limit:3 %}
       <div class="post">
         <h3 class="post-title">
-          <a href="{{ site.baseurl }}{{ post.url | remove_first: '/'}}">
+          <a href="/{{ post.url | remove_first: '/'}}">
             {{ post.title }}
           </a>
         </h3>
