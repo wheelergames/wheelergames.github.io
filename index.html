@@ -10,8 +10,8 @@ style: home
       {% if image.path contains 'images/home_carousel' %}
         {% assign parts = image.path | split: "_" %}
         <li>
-          <a href="{{ site.url }}/games/{{ parts[2] }}.html">
-            <img src="{{ site.url }}/{{ image.path }}" alt="image"/>
+          <a href="games/{{ parts[2] }}.html">
+            <img src="{{ image.path }}" alt="image"/>
           </a>
         </li>
       {% endif %}

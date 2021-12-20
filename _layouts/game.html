@@ -1,5 +1,62 @@
 ---
 layout: default
+style: individual_game
 ---
 <h1>{{ page.name }}</h1>
-{{ page.content }}
+<div class="store-block-for-game">
+    {% for platform in page.platform %}
+        {% if platform.store_url %}
+            <div class="store-block">
+                <a href="{{ platform.store_url }}" style="display:block;">
+                    <img src="/assets/images/store_image/{{ platform.store_image }}">
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+{% if page.sections[0] %}
+    {% if page.youtube %}
+        <div class="game-page-block-equal">
+    {% else %}
+        <div class="game-page-block-big-left">
+    {% endif %}
+            <div class="left">
+                {{ page.sections[0] }}
+            </div>
+            <div class="right">
+                {% if page.youtube %}
+                <div class="youtube-container">
+                    <iframe class="youtube" src="{{ page.youtube }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                {% elsif page.youtube_alternate_image %}
+                    <img src="/assets/images/games/{{ page.youtube_alternate_image }}">
+                {% endif %}
+            </div>
+    </div>
+{% endif %}
+{% if page.sections[1] %}
+    <div class="game-page-block-big-right">
+            <div class="left">
+                {% if page.images[1] %}
+                    <img src="/assets/images/games/{{ page.images[1] }}">
+                {% endif %}
+            </div>
+            <div class="right">
+                {{ page.sections[1] }}
+            </div>
+    </div>
+{% endif %}
+{% if page.sections[2] %}
+    <div class="game-page-block-big-left">
+        <div class="left">
+            {{ page.sections[2] }}
+        </div>
+        <div class="right">
+            {% if page.images[2] %}
+                <img src="/assets/images/games/{{ page.images[2] }}">
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
